@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roadmap — arah-web</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: { colors: {
+        'teal': { DEFAULT: '#00D8A0' },
+        'amber': { DEFAULT: '#FF7040' },
+        'bg': '#080D12',
+        'surface': '#111820',
+        'surface2': '#1A2433',
+      }}}
+    }
+  </script>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; }
+    .code-block { background: #0D1117; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 1.25rem; overflow-x: auto; }
+    code { font-family: 'Fira Code', 'Cascadia Code', monospace; font-size: 0.85rem; color: #00D8A0; }
+    pre code { color: #e8f0fa; }
+    .nav-link { font-size: 0.875rem; color: #7A94B0; transition: color 0.15s; }
+    .nav-link:hover, .nav-link.active { color: #e8f0fa; }
+  </style>
+</head>
+<body class="bg-bg text-slate-300 min-h-screen">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 inset-x-0 z-50 border-b border-white/[0.07] bg-bg/90 backdrop-blur-xl">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="font-black text-xl tracking-tight text-white">
+        Ar<span class="text-teal">ah</span>
+        <span class="text-slate-500 font-semibold text-base ml-1">/ web</span>
+      </a>
+      <div class="flex items-center gap-5">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="features.html" class="nav-link">Features</a>
+        <a href="roadmap.html" class="nav-link active">Roadmap</a>
+        <a href="contributing.html" class="nav-link">Contributing</a>
+        <a href="https://github.com/deanz93/arah-web" class="bg-teal text-bg text-sm font-bold px-4 py-1.5 rounded-lg hover:opacity-80 transition-opacity">GitHub →</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <section class="pt-36 pb-12 px-6">
+    <div class="max-w-5xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">Development Roadmap</h1>
+      <p class="text-lg text-slate-400 max-w-2xl leading-relaxed">
+        52 stories across 3 phases — MVP, v1, and v2. All currently at 🔲 Todo status and open for contribution.
+      </p>
+    </div>
+  </section>
+
+  <!-- LEGEND -->
+  <section class="px-6 pb-10">
+    <div class="max-w-5xl mx-auto">
+      <div class="bg-surface border border-white/[0.07] rounded-xl px-6 py-4 flex flex-wrap gap-6">
+        <div class="flex items-center gap-2 text-sm">
+          <span class="text-lg">🔲</span>
+          <span class="text-slate-300">Todo</span>
+        </div>
+        <div class="flex items-center gap-2 text-sm">
+          <span class="text-lg">🔄</span>
+          <span class="text-slate-300">In Progress</span>
+        </div>
+        <div class="flex items-center gap-2 text-sm">
+          <span class="text-lg">✅</span>
+          <span class="text-slate-300">Done</span>
+        </div>
+        <div class="ml-auto text-xs text-slate-500 self-center">All stories currently at 🔲 Todo</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EPIC PROGRESS TABLE -->
+  <section class="px-6 pb-16">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl font-black text-white mb-6">Epic Overview</h2>
+      <div class="bg-surface border border-white/[0.07] rounded-2xl overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-white/[0.07] bg-surface2">
+                <th class="text-left px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-widest">Epic</th>
+                <th class="text-center px-4 py-4 text-xs font-bold text-slate-500 uppercase tracking-widest">Stories</th>
+                <th class="text-center px-4 py-4 text-xs font-bold text-slate-500 uppercase tracking-widest">Priority</th>
+                <th class="text-center px-4 py-4 text-xs font-bold text-slate-500 uppercase tracking-widest">Status</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/[0.04]">
+              <tr class="hover:bg-surface2/50 transition-colors">
+                <td class="px-6 py-4 text-slate-300 font-medium">📊 Dashboard &amp; Analytics</td>
+                <td class="px-4 py-4 text-center text-teal font-bold">12</td>
+                <td class="px-4 py-4 text-center"><span class="bg-red-500/10 text-red-400 text-xs px-2 py-0.5 rounded-full">MVP</span></td>
+                <td class="px-4 py-4 text-center text-slate-500">🔲 Todo</td>
+              </tr>
+              <tr class="hover:bg-surface2/50 transition-colors">
+                <td class="px-6 py-4 text-slate-300 font-medium">🛡️ Report Moderation</td>
+                <td class="px-4 py-4 text-center text-teal font-bold">11</td>
+                <td class="px-4 py-4 text-center"><span class="bg-red-500/10 text-red-400 text-xs px-2 py-0.5 rounded-full">MVP</span></td>
+                <td class="px-4 py-4 text-center text-slate-500">🔲 Todo</td>
+              </tr>
+              <tr class="hover:bg-surface2/50 transition-colors">
+                <td class="px-6 py-4 text-slate-300 font-medium">👥 User Management</td>
+                <td class="px-4 py-4 text-center text-teal font-bold">12</td>
+                <td class="px-4 py-4 text-center"><span class="bg-amber/10 text-amber text-xs px-2 py-0.5 rounded-full">v1</span></td>
+                <td class="px-4 py-4 text-center text-slate-500">🔲 Todo</td>
+              </tr>
+              <tr class="hover:bg-surface2/50 transition-colors">
+                <td class="px-6 py-4 text-slate-300 font-medium">🌊 Flood Zone Management</td>
+                <td class="px-4 py-4 text-center text-teal font-bold">8</td>
+                <td class="px-4 py-4 text-center"><span class="bg-red-500/10 text-red-400 text-xs px-2 py-0.5 rounded-full">MVP</span></td>
+                <td class="px-4 py-4 text-center text-slate-500">🔲 Todo</td>
+              </tr>
+              <tr class="hover:bg-surface2/50 transition-colors">
+                <td class="px-6 py-4 text-slate-300 font-medium">🔐 Auth &amp; Security</td>
+                <td class="px-4 py-4 text-center text-teal font-bold">9</td>
+                <td class="px-4 py-4 text-center"><span class="bg-red-500/10 text-red-400 text-xs px-2 py-0.5 rounded-full">MVP</span></td>
+                <td class="px-4 py-4 text-center text-slate-500">🔲 Todo</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr class="border-t border-white/[0.07] bg-surface2">
+                <td class="px-6 py-4 text-slate-400 font-semibold">Total</td>
+                <td class="px-4 py-4 text-center text-white font-black text-base">52</td>
+                <td class="px-4 py-4"></td>
+                <td class="px-4 py-4 text-center text-slate-500 text-xs">0 / 52 complete</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MVP STORIES -->
+  <section class="px-6 pb-16">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl font-black text-white mb-2">Notable MVP Stories</h2>
+      <p class="text-slate-500 text-sm mb-6">The foundation — these stories unlock everything else.</p>
+      <div class="grid md:grid-cols-2 gap-4">
+
+        <div class="bg-surface border border-white/[0.07] rounded-xl p-5 flex gap-4">
+          <div class="bg-red-500/10 text-red-400 text-xs font-bold px-2 py-1 rounded h-fit shrink-0">MVP</div>
+          <div>
+            <div class="text-xs text-teal font-mono mb-1">WEB-001</div>
+            <div class="text-white font-semibold text-sm mb-1">Admin Login</div>
+            <div class="text-slate-500 text-xs">Firebase Auth sign-in page for admin portal with email/password and Google SSO, redirecting to dashboard on success.</div>
+          </div>
+        </div>
+
+        <div class="bg-surface border border-white/[0.07] rounded-xl p-5 flex gap-4">
+          <div class="bg-red-500/10 text-red-400 text-xs font-bold px-2 py-1 rounded h-fit shrink-0">MVP</div>
+          <div>
+            <div class="text-xs text-teal font-mono mb-1">WEB-002</div>
+            <div class="text-white font-semibold text-sm mb-1">Dashboard Overview</div>
+            <div class="text-slate-500 text-xs">Top-level KPI cards: active incidents, pending reports, registered users, and platform health — all sourced from Firebase Firestore.</div>
+          </div>
+        </div>
+
+        <div class="bg-surface border border-white/[0.07] rounded-xl p-5 flex gap-4">
+          <div class="bg-red-500/10 text-red-400 text-xs font-bold px-2 py-1 rounded h-fit shrink-0">MVP</div>
+          <div>
+            <div class="text-xs text-teal font-mono mb-1">WEB-011</div>
+            <div class="text-white font-semibold text-sm mb-1">Report Queue</div>
+            <div class="text-slate-500 text-xs">Paginated list of community reports pending moderation with photo preview, approve/reject buttons, and reason input.</div>
+          </div>
+        </div>
+
+        <div class="bg-surface border border-white/[0.07] rounded-xl p-5 flex gap-4">
+          <div class="bg-red-500/10 text-red-400 text-xs font-bold px-2 py-1 rounded h-fit shrink-0">MVP</div>
+          <div>
+            <div class="text-xs text-teal font-mono mb-1">WEB-023</div>
+            <div class="text-white font-semibold text-sm mb-1">User List</div>
+            <div class="text-slate-500 text-xs">Searchable and filterable user table with status (active/banned), role, report count, and ban/unban action.</div>
+          </div>
+        </div>
+
+        <div class="bg-surface border border-white/[0.07] rounded-xl p-5 flex gap-4 md:col-span-2">
+          <div class="bg-red-500/10 text-red-400 text-xs font-bold px-2 py-1 rounded h-fit shrink-0">MVP</div>
+          <div>
+            <div class="text-xs text-teal font-mono mb-1">WEB-035</div>
+            <div class="text-white font-semibold text-sm mb-1">Flood Zone Map</div>
+            <div class="text-slate-500 text-xs">MapLibre GL admin interface for drawing, editing, and activating flood zones — with severity level selector and broadcast trigger.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CURRENT FOCUS -->
+  <section class="px-6 pb-24">
+    <div class="max-w-5xl mx-auto">
+      <div class="bg-surface2 border border-teal/20 rounded-2xl p-6">
+        <div class="flex items-start gap-4">
+          <span class="text-teal text-2xl mt-0.5">🚀</span>
+          <div>
+            <h3 class="text-white font-bold mb-2">Current Focus</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-3">
+              All 52 stories are at <span class="text-white font-semibold">🔲 Todo</span> status — we are actively seeking first contributors to pick up MVP stories and start building the admin dashboard foundation.
+            </p>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Start with <code>docs/bmad/04-stories.md</code> in the repository, pick a WEB-00x story, branch off in the format <code>feature/WEB-NNN-description</code>, and open a pull request.
+            </p>
+            <a href="contributing.html" class="inline-block mt-4 bg-teal text-bg text-sm font-bold px-5 py-2.5 rounded-lg hover:opacity-80 transition-opacity">
+              Read Contributing Guide →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/[0.07] bg-surface mt-20 py-10">
+    <div class="max-w-5xl mx-auto px-6 flex flex-wrap justify-between items-start gap-6">
+      <div>
+        <div class="font-black text-lg text-white">Ar<span class="text-teal">ah</span></div>
+        <p class="text-xs text-slate-500 mt-1">Navigasi Malaysia, Tanpa Kompromi.</p>
+      </div>
+      <div class="flex gap-8 text-sm">
+        <div>
+          <div class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Platform</div>
+          <div class="flex flex-col gap-1.5">
+            <a href="https://deanz93.github.io/arah/" class="text-slate-400 hover:text-white">Main Site</a>
+            <a href="https://github.com/deanz93/arah" class="text-slate-400 hover:text-white">Monorepo</a>
+          </div>
+        </div>
+        <div>
+          <div class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">This Repo</div>
+          <div class="flex flex-col gap-1.5">
+            <a href="https://github.com/deanz93/arah-web" class="text-slate-400 hover:text-white">GitHub</a>
+            <a href="contributing.html" class="text-slate-400 hover:text-white">Contribute</a>
+            <a href="roadmap.html" class="text-slate-400 hover:text-white">Roadmap</a>
+          </div>
+        </div>
+      </div>
+      <div class="text-xs text-slate-600">MIT License · Built in Malaysia 🇲🇾</div>
+    </div>
+  </footer>
+
+</body>
+</html>

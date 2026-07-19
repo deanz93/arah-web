@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>arah-web — Admin Dashboard & Public Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: { colors: {
+        'teal': { DEFAULT: '#00D8A0' },
+        'amber': { DEFAULT: '#FF7040' },
+        'bg': '#080D12',
+        'surface': '#111820',
+        'surface2': '#1A2433',
+      }}}
+    }
+  </script>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; }
+    .code-block { background: #0D1117; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 1.25rem; overflow-x: auto; }
+    code { font-family: 'Fira Code', 'Cascadia Code', monospace; font-size: 0.85rem; color: #00D8A0; }
+    pre code { color: #e8f0fa; }
+    .nav-link { font-size: 0.875rem; color: #7A94B0; transition: color 0.15s; }
+    .nav-link:hover, .nav-link.active { color: #e8f0fa; }
+  </style>
+</head>
+<body class="bg-bg text-slate-300 min-h-screen">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 inset-x-0 z-50 border-b border-white/[0.07] bg-bg/90 backdrop-blur-xl">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="font-black text-xl tracking-tight text-white">
+        Ar<span class="text-teal">ah</span>
+        <span class="text-slate-500 font-semibold text-base ml-1">/ web</span>
+      </a>
+      <div class="flex items-center gap-5">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="features.html" class="nav-link">Features</a>
+        <a href="roadmap.html" class="nav-link">Roadmap</a>
+        <a href="contributing.html" class="nav-link">Contributing</a>
+        <a href="https://github.com/deanz93/arah-web" class="bg-teal text-bg text-sm font-bold px-4 py-1.5 rounded-lg hover:opacity-80 transition-opacity">GitHub →</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="pt-40 pb-20 px-6">
+    <div class="max-w-5xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 bg-surface2 border border-white/[0.07] rounded-full px-4 py-1.5 text-xs text-teal font-semibold mb-6 tracking-wide uppercase">
+        Next.js 14 · Open Source · Malaysia-First
+      </div>
+      <h1 class="text-5xl md:text-6xl font-black text-white tracking-tight mb-5 leading-tight">
+        arah<span class="text-teal">-web</span>
+      </h1>
+      <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-8 leading-relaxed">
+        Admin dashboard &amp; public portal for the Arah platform — report moderation, flood zone management, analytics, and the public-facing map embed. Built with Next.js 14.
+      </p>
+
+      <!-- Badges -->
+      <div class="flex flex-wrap justify-center gap-2 mb-10">
+        <span class="bg-surface2 border border-white/[0.07] text-xs px-3 py-1.5 rounded-full text-slate-300">Next.js 14</span>
+        <span class="bg-surface2 border border-white/[0.07] text-xs px-3 py-1.5 rounded-full text-slate-300">TypeScript</span>
+        <span class="bg-surface2 border border-white/[0.07] text-xs px-3 py-1.5 rounded-full text-slate-300">Tailwind CSS</span>
+        <span class="bg-surface2 border border-white/[0.07] text-xs px-3 py-1.5 rounded-full text-slate-300">shadcn/ui</span>
+        <span class="bg-surface2 border border-white/[0.07] text-xs px-3 py-1.5 rounded-full text-teal">MIT License</span>
+        <span class="bg-surface2 border border-white/[0.07] text-xs px-3 py-1.5 rounded-full text-amber">52 Stories</span>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="https://github.com/deanz93/arah-web" class="bg-teal text-bg font-bold px-6 py-3 rounded-xl hover:opacity-80 transition-opacity">
+          View on GitHub →
+        </a>
+        <a href="roadmap.html" class="bg-surface2 border border-white/[0.07] text-white font-semibold px-6 py-3 rounded-xl hover:bg-surface transition-colors">
+          Read Roadmap
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <section class="px-6 pb-16">
+    <div class="max-w-5xl mx-auto">
+      <div class="bg-surface border border-white/[0.07] rounded-2xl p-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-4xl font-black text-teal mb-1">52</div>
+          <div class="text-sm text-slate-500">Stories Planned</div>
+        </div>
+        <div>
+          <div class="text-4xl font-black text-white mb-1">5</div>
+          <div class="text-sm text-slate-500">Feature Epics</div>
+        </div>
+        <div>
+          <div class="text-4xl font-black text-white mb-1">2</div>
+          <div class="text-sm text-slate-500">Portals (Admin + Public)</div>
+        </div>
+        <div>
+          <div class="text-4xl font-black text-amber mb-1">MIT</div>
+          <div class="text-sm text-slate-500">License</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT CARDS -->
+  <section class="px-6 pb-20">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-black text-white mb-3 text-center">Two Portals, One Platform</h2>
+      <p class="text-slate-500 text-center mb-10">The web layer that powers moderation, analytics, and the public face of Arah.</p>
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="bg-surface border border-white/[0.07] rounded-2xl p-6 hover:border-teal/30 transition-colors">
+          <div class="text-3xl mb-4">🖥️</div>
+          <h3 class="text-lg font-bold text-white mb-2">Admin Dashboard</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Report moderation queue, bulk approve/reject, flood zone drawing tool, MAU/DAU analytics, user management with PDPA export, and moderator audit log.
+          </p>
+        </div>
+
+        <div class="bg-surface border border-white/[0.07] rounded-2xl p-6 hover:border-teal/30 transition-colors">
+          <div class="text-3xl mb-4">🌐</div>
+          <h3 class="text-lg font-bold text-white mb-2">Public Portal</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Landing page with embedded map, real-time API status page, incident feed, and app download links. Optimised for SEO with Next.js App Router.
+          </p>
+        </div>
+
+        <div class="bg-surface border border-white/[0.07] rounded-2xl p-6 hover:border-teal/30 transition-colors">
+          <div class="text-3xl mb-4">🔐</div>
+          <h3 class="text-lg font-bold text-white mb-2">Security</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Firebase Auth with MFA for admins, role-based access control, IP allowlist, full audit trail, and PDPA-compliant data handling throughout.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK START -->
+  <section class="px-6 pb-20">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-black text-white mb-3">Quick Start</h2>
+      <p class="text-slate-500 mb-6">Get the dev server running in 2 steps.</p>
+      <div class="code-block">
+        <pre><code># 1. Clone and install
+git clone https://github.com/deanz93/arah-web.git
+cd arah-web
+npm ci
+
+# 2. Start the dev server
+npm run dev
+# → http://localhost:3000</code></pre>
+      </div>
+      <p class="text-slate-500 text-sm mt-4">
+        Need Firebase credentials, environment variables, or emulator setup? See <a href="contributing.html" class="text-teal hover:underline">Contributing</a> for the full guide.
+      </p>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section class="px-6 pb-24">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-black text-white mb-3">Tech Stack</h2>
+      <p class="text-slate-500 mb-6">Modern Next.js stack with a complete test pyramid.</p>
+      <div class="flex flex-wrap gap-3">
+        <span class="bg-surface2 border border-teal/20 text-teal text-sm font-semibold px-4 py-2 rounded-xl">Next.js 14 App Router</span>
+        <span class="bg-surface2 border border-white/[0.07] text-slate-300 text-sm font-semibold px-4 py-2 rounded-xl">TypeScript</span>
+        <span class="bg-surface2 border border-white/[0.07] text-slate-300 text-sm font-semibold px-4 py-2 rounded-xl">Tailwind CSS v3</span>
+        <span class="bg-surface2 border border-white/[0.07] text-slate-300 text-sm font-semibold px-4 py-2 rounded-xl">shadcn/ui</span>
+        <span class="bg-surface2 border border-white/[0.07] text-slate-300 text-sm font-semibold px-4 py-2 rounded-xl">Firebase Admin SDK</span>
+        <span class="bg-surface2 border border-white/[0.07] text-slate-300 text-sm font-semibold px-4 py-2 rounded-xl">Vitest + RTL</span>
+        <span class="bg-surface2 border border-white/[0.07] text-slate-300 text-sm font-semibold px-4 py-2 rounded-xl">Playwright</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/[0.07] bg-surface mt-20 py-10">
+    <div class="max-w-5xl mx-auto px-6 flex flex-wrap justify-between items-start gap-6">
+      <div>
+        <div class="font-black text-lg text-white">Ar<span class="text-teal">ah</span></div>
+        <p class="text-xs text-slate-500 mt-1">Navigasi Malaysia, Tanpa Kompromi.</p>
+      </div>
+      <div class="flex gap-8 text-sm">
+        <div>
+          <div class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Platform</div>
+          <div class="flex flex-col gap-1.5">
+            <a href="https://deanz93.github.io/arah/" class="text-slate-400 hover:text-white">Main Site</a>
+            <a href="https://github.com/deanz93/arah" class="text-slate-400 hover:text-white">Monorepo</a>
+          </div>
+        </div>
+        <div>
+          <div class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">This Repo</div>
+          <div class="flex flex-col gap-1.5">
+            <a href="https://github.com/deanz93/arah-web" class="text-slate-400 hover:text-white">GitHub</a>
+            <a href="contributing.html" class="text-slate-400 hover:text-white">Contribute</a>
+            <a href="roadmap.html" class="text-slate-400 hover:text-white">Roadmap</a>
+          </div>
+        </div>
+      </div>
+      <div class="text-xs text-slate-600">MIT License · Built in Malaysia 🇲🇾</div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Features — arah-web</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: { colors: {
+        'teal': { DEFAULT: '#00D8A0' },
+        'amber': { DEFAULT: '#FF7040' },
+        'bg': '#080D12',
+        'surface': '#111820',
+        'surface2': '#1A2433',
+      }}}
+    }
+  </script>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; }
+    .code-block { background: #0D1117; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 1.25rem; overflow-x: auto; }
+    code { font-family: 'Fira Code', 'Cascadia Code', monospace; font-size: 0.85rem; color: #00D8A0; }
+    pre code { color: #e8f0fa; }
+    .nav-link { font-size: 0.875rem; color: #7A94B0; transition: color 0.15s; }
+    .nav-link:hover, .nav-link.active { color: #e8f0fa; }
+  </style>
+</head>
+<body class="bg-bg text-slate-300 min-h-screen">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 inset-x-0 z-50 border-b border-white/[0.07] bg-bg/90 backdrop-blur-xl">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="font-black text-xl tracking-tight text-white">
+        Ar<span class="text-teal">ah</span>
+        <span class="text-slate-500 font-semibold text-base ml-1">/ web</span>
+      </a>
+      <div class="flex items-center gap-5">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="features.html" class="nav-link active">Features</a>
+        <a href="roadmap.html" class="nav-link">Roadmap</a>
+        <a href="contributing.html" class="nav-link">Contributing</a>
+        <a href="https://github.com/deanz93/arah-web" class="bg-teal text-bg text-sm font-bold px-4 py-1.5 rounded-lg hover:opacity-80 transition-opacity">GitHub →</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <section class="pt-36 pb-12 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="inline-flex items-center gap-2 bg-surface2 border border-white/[0.07] rounded-full px-4 py-1.5 text-xs text-teal font-semibold mb-5 tracking-wide uppercase">
+        5 Epics · 52 Stories
+      </div>
+      <h1 class="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">Features</h1>
+      <p class="text-lg text-slate-400 max-w-2xl leading-relaxed">
+        Admin Dashboard &amp; Public Portal — 52 planned stories spanning moderation, analytics, flood zone management, and user administration.
+      </p>
+    </div>
+  </section>
+
+  <!-- EPIC GRID -->
+  <section class="px-6 pb-20">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+
+      <!-- Dashboard & Analytics -->
+      <div class="bg-surface border border-white/[0.07] rounded-2xl p-6 hover:border-teal/20 transition-colors">
+        <div class="flex items-start justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl">📊</span>
+            <h3 class="text-lg font-bold text-white">Dashboard &amp; Analytics</h3>
+          </div>
+          <span class="bg-teal/10 text-teal text-xs font-bold px-2.5 py-1 rounded-full">12 stories</span>
+        </div>
+        <ul class="text-sm text-slate-400 space-y-1.5">
+          <li class="flex items-start gap-2"><span class="text-teal mt-0.5">›</span> MAU/DAU time-series charts with date range picker</li>
+          <li class="flex items-start gap-2"><span class="text-teal mt-0.5">›</span> Real-time incident heatmap overlay</li>
+          <li class="flex items-start gap-2"><span class="text-teal mt-0.5">›</span> Active incident counter and report velocity</li>
+          <li class="flex items-start gap-2"><span class="text-teal mt-0.5">›</span> Revenue/cost overview, CSV export for all tables</li>
+        </ul>
+      </div>
+
+      <!-- Report Moderation -->
+      <div class="bg-surface border border-white/[0.07] rounded-2xl p-6 hover:border-teal/20 transition-colors">
+        <div class="flex items-start justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl">🛡️</span>
+            <h3 class="text-lg font-bold text-white">Report Moderation</h3>
+          </div>
+          <span class="bg-amber/10 text-amber text-xs font-bold px-2.5 py-1 rounded-full">11 stories</span>
+        </div>
+        <ul class="text-sm text-slate-400 space-y-1.5">
+          <li class="flex items-start gap-2"><span class="text-teal mt-0.5">›</span> Paginated review queue with photo preview</li>
+          <li class="flex items-start gap-2"><span class="text-teal mt-0.5">›</span> Bulk approve/reject with reason codes</li>
+          <li class="flex items-start gap-2"><span class="text-teal mt-0.5">›</span> User appeal workflow with moderator notes</li>
+          <li class="flex items-start gap-2"><span class="text-teal mt-0.5">›</span> Auto-flag rules and full moderator audit log</li>
+        </ul>
+      </div>
+
+      <!-- User Management -->
+      <div class="bg-surface border border-white/[0.07] rounded-2xl p-6 hover:border-teal/20 transition-colors">
+        <div class="flex items-start justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl">👥</span>
+            <h3 class="text-lg font-bold text-white">User Management</h3>
+          </div>
+          <span class="bg-teal/10 text-teal text-xs font-bold px-2.5 py-1 rounded-full">12 stories</span>
+        </div>
+        <ul class="text-sm text-slate-400 space-y-1.5">
+          <li class="flex items-start gap-2"><span class="text-teal mt-0.5">›</span> Searchable user list with status and role filters</li>
+          <li class="flex items-start gap-2"><span class="text-teal mt-0.5">›</span> Ban/unban with reason and duration</li>
+          <li class="flex items-start gap-2"><span class="text-teal mt-0.5">›</span> PDPA data export and account deletion on request</li>
+          <li class="flex items-start gap-2"><span class="text-teal mt-0.5">›</span> Role management: admin, moderator, user</li>
+        </ul>
+      </div>
+
+      <!-- Flood Zone Management -->
+      <div class="bg-surface border border-white/[0.07] rounded-2xl p-6 hover:border-teal/20 transition-colors">
+        <div class="flex items-start justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl">🌊</span>
+            <h3 class="text-lg font-bold text-white">Flood Zone Management</h3>
+          </div>
+          <span class="bg-red-500/10 text-red-400 text-xs font-bold px-2.5 py-1 rounded-full">8 stories</span>
+        </div>
+        <ul class="text-sm text-slate-400 space-y-1.5">
+          <li class="flex items-start gap-2"><span class="text-teal mt-0.5">›</span> Draw and edit flood zones directly on map</li>
+          <li class="flex items-start gap-2"><span class="text-teal mt-0.5">›</span> Set severity levels: advisory, warning, danger</li>
+          <li class="flex items-start gap-2"><span class="text-teal mt-0.5">›</span> Trigger push broadcasts to affected mobile users</li>
+          <li class="flex items-start gap-2"><span class="text-teal mt-0.5">›</span> Zone history with activation/deactivation audit</li>
+        </ul>
+      </div>
+
+      <!-- Auth & Security -->
+      <div class="bg-surface border border-white/[0.07] rounded-2xl p-6 hover:border-teal/20 transition-colors md:col-span-2">
+        <div class="flex items-start justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl">🔐</span>
+            <h3 class="text-lg font-bold text-white">Auth &amp; Security</h3>
+          </div>
+          <span class="bg-teal/10 text-teal text-xs font-bold px-2.5 py-1 rounded-full">9 stories</span>
+        </div>
+        <div class="grid md:grid-cols-2 gap-4">
+          <ul class="text-sm text-slate-400 space-y-1.5">
+            <li class="flex items-start gap-2"><span class="text-teal mt-0.5">›</span> Firebase Auth with Google SSO and email/password</li>
+            <li class="flex items-start gap-2"><span class="text-teal mt-0.5">›</span> MFA (TOTP) mandatory for admin accounts</li>
+            <li class="flex items-start gap-2"><span class="text-teal mt-0.5">›</span> Session management with forced re-auth on sensitive actions</li>
+          </ul>
+          <ul class="text-sm text-slate-400 space-y-1.5">
+            <li class="flex items-start gap-2"><span class="text-teal mt-0.5">›</span> IP allowlist for admin portal access</li>
+            <li class="flex items-start gap-2"><span class="text-teal mt-0.5">›</span> Full audit trail: who did what and when</li>
+            <li class="flex items-start gap-2"><span class="text-teal mt-0.5">›</span> Role-based route guards on all admin pages</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TAILWIND NOTE -->
+  <section class="px-6 pb-24">
+    <div class="max-w-5xl mx-auto">
+      <div class="bg-surface2 border border-teal/20 rounded-2xl p-6 flex gap-4 items-start">
+        <span class="text-teal text-2xl mt-0.5">💡</span>
+        <div>
+          <h3 class="text-white font-bold mb-1">Tailwind + shadcn/ui — No Custom CSS</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            All UI in arah-web is built with <span class="text-teal font-semibold">Tailwind CSS v3</span> utility classes and <span class="text-teal font-semibold">shadcn/ui</span> components.
+            No custom CSS files are permitted — contributors must use Tailwind utilities and shadcn primitives exclusively.
+            Dark mode variants (<code>dark:</code>) must be applied alongside all colour utilities.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/[0.07] bg-surface mt-20 py-10">
+    <div class="max-w-5xl mx-auto px-6 flex flex-wrap justify-between items-start gap-6">
+      <div>
+        <div class="font-black text-lg text-white">Ar<span class="text-teal">ah</span></div>
+        <p class="text-xs text-slate-500 mt-1">Navigasi Malaysia, Tanpa Kompromi.</p>
+      </div>
+      <div class="flex gap-8 text-sm">
+        <div>
+          <div class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Platform</div>
+          <div class="flex flex-col gap-1.5">
+            <a href="https://deanz93.github.io/arah/" class="text-slate-400 hover:text-white">Main Site</a>
+            <a href="https://github.com/deanz93/arah" class="text-slate-400 hover:text-white">Monorepo</a>
+          </div>
+        </div>
+        <div>
+          <div class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">This Repo</div>
+          <div class="flex flex-col gap-1.5">
+            <a href="https://github.com/deanz93/arah-web" class="text-slate-400 hover:text-white">GitHub</a>
+            <a href="contributing.html" class="text-slate-400 hover:text-white">Contribute</a>
+            <a href="roadmap.html" class="text-slate-400 hover:text-white">Roadmap</a>
+          </div>
+        </div>
+      </div>
+      <div class="text-xs text-slate-600">MIT License · Built in Malaysia 🇲🇾</div>
+    </div>
+  </footer>
+
+</body>
+</html>
