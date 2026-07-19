@@ -1,5 +1,9 @@
 # arah-web
 
+> 🔒 **Private Repository** — This repo is part of the [Arah platform](https://github.com/deanz93/arah). Source code is proprietary and not open-source.
+
+
+
 Next.js 14 admin portal for the [Arah](https://github.com/deanz93/arah) navigation platform.
 Dashboard, report moderation, user management, analytics charts — Firebase Auth + Firestore Admin.
 
